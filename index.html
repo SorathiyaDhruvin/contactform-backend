@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current portfolio</title>
+  <link rel="icon" type="image" href="assets/title-photo.png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <!-------------------------------------- Loading Screen ----------------------------------------->
+  <div id="loadingScreen">
+    <span class="loader"></span>
+    <div class="text" id="loadingText"></div>
+  </div>
+
+  <!-----------------------------------------blur out of side bar----------------------------------------->
+  <div id="overlay" class="overlay"></div>
+
+  <!-------------------------------------- header bar ----------------------------------------->
+  <main id="homePage" style="display: none;">
+  <header class="navbar">
+    <!----------------------------------- logo -------------------------------------->
+    <div class="nav-left">
+      <a class="logo" href="index.html" title="Refresh">Dhruvin</a>
+    </div>
+
+    <!----------------------------------------- menu ------------------------------------------>
+    <div class="nav-center">
+      <ul class="menu">
+        <li><a href="#Home" data-section="Home" class="active"><i class='bx bx-home'></i> Home</a></li>
+        <li><a href="#About" data-section="About"><i class='bx bx-user'></i> About</a></li>
+        <li><a href="#Experience" data-section="Experience"><i class='bx bx-briefcase'></i> Experience</a></li>
+        <li><a href="#Skills" data-section="Skills"><i class='bx bx-bar-chart-alt-2'></i> Skills</a></li>
+        <li><a href="#Projects" data-section="Projects"><i class='bx bx-folder'></i> Projects</a></li>
+        <li><a href="#Contact" data-section="Contact"><i class='bx bx-envelope'></i> Contact</a></li>
+      </ul>
+    </div>
+
+    <!------------------------------------- themetoggle ---------------------------------------->
+    <div class="nav-right">
+      <div class="theme-toggle" id="themeToggle">
+        <i class='bx bx-sun'></i>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class='bx bx-menu'></i>
+      </div>
+
+    </div>
+  </header>
+
+  <!-------------------------------------------- MOBILE MENU ------------------------------------------------->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="closemenu" id="closeMenu"><i class='bx bx-x'></i></div>
+    <li><a href="#Home" data-section="Home" class="active"><i class='bx bx-home'></i> Home</a></li>
+    <li><a href="#About" data-section="About"><i class='bx bx-user'></i> About</a></li>
+    <li><a href="#Experience" data-section="Experience"><i class='bx bx-briefcase'></i> Experience</a></li>
+    <li><a href="#Skills" data-section="Skills"><i class='bx bx-bar-chart-alt-2'></i> Skills</a></li>
+    <li><a href="#Projects" data-section="Projects"><i class='bx bx-folder'></i> Projects</a></li>
+    <li><a href="#Contact" data-section="Contact"><i class='bx bx-envelope'></i> Contact</a></li>
+  </div>
+
+  <!---------------------------------------home page--------------------------------------------->
+  <section id="Home" class="home">
+    <div class="home-container">
+      <!------------------------------------ LEFT side box ------------------------------------------>
+      <div class="left-content">
+        <div class="hero-content">
+          <h1>
+            Hi, I'm <span class="gradient-name">Dhruvin Sorathiya</span>
+          </h1>
+        </div>
+
+        <div class="hero-wrapper" aria-label="Hero Section">
+          <h2>I'm&nbsp;<span id="typed" class="typed-text"></span></h2>
+        </div>
+
+        <div class="work-btn">
+          <i class='bx bx-check-circle'></i>
+          Available for Work
+        </div>
+
+       <p class="description">
+  Computer Science Engineering student skilled in multiple programming languages and core CS fundamentals.
+  <br>Experienced in data structures, operating systems, and problem-solving on online platforms.
+  <br>Focused on growing as a full-stack software developer and building scalable, real-world applications.
+</p>
+
+
+        <div class="buttons">
+          <a href="Resume.pdf" class="button button-primary">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#Contact" data-section="Contact" class="button button-secondary">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="social-icons" aria-label="Social media links">
+          <a href="https://linkedin.com/in/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class='bx bxl-linkedin' style="color:rgb(0, 60, 255)"></i>
+          </a>
+          <a href="https://github.com/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class='bx bxl-github' style="color:rgb(35, 35, 35)"></i>
+          </a>
+          <a href="https://twitter.com/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer"
+            aria-label="Twitter">
+            <i class='bx bxl-twitter' style="color: blue"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-------------------------------- RIGHT side box ---------------------------------->
+      <div class="photo-box">
+        <img src="assets/photo.png" alt="Dhruvin">
+
+
+        <!-- Scroll Down -->
+        <div class="scroll-down">
+          <p>Scroll to Explore</p>
+          <i class='bx bx-down-arrow-alt' onclick="scrollToSection()"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <button id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+  <!--------------------------------------About page---------------------------------------->
+  <div class="center">
+    <section id="About" class="about-container">
+      <h3>About Me</h3>
+      <p class="about-text">
+  I’m a Computer Science Engineering student and aspiring software developer with a strong foundation in core computer science concepts.
+  I enjoy building reliable web applications, solving complex problems, and continuously improving my skills through hands-on projects
+  and real-world development practices.
+</p>
+
+
+      <div class="abouts-grid">
+        <div class="about-card">
+          <i class='bx bx-paint'></i>
+          <h4>Frontend Development</h4>
+          <p>Building responsive and user-friendly web interfaces using modern frontend technologies.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Responsive</span>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <i class='bx bx-server'></i>
+          <h4>Backend Development</h4>
+          <p>Developing secure and scalable server-side applications with efficient data handling.</p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">SQL</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+
+
+        <div class="about-card">
+         <i class='bx bx-git-branch'></i>
+          <h4>DSA & Problem Solving</h4>
+          <p>Strong understanding of data structures, algorithms, and logical problem-solving techniques.</p>
+          <div class="tags">
+            <span class="tag">Arrays</span>
+    <span class="tag">Linked List</span>
+    <span class="tag">Queue</span>
+    <span class="tag">Graph</span>
+          </div>
+        </div>
+
+
+        <div class="about-card">
+         <i class='bx bx-chip'></i>
+          <h4>Computer Science Engineering</h4>
+          <p>Well-versed in operating systems, memory management, and system-level fundamentals.</p>
+          <div class="tags">
+             <span class="tag">Operating Systems</span>
+    <span class="tag">Memory Management</span>
+    <span class="tag">DBMS</span>
+    <span class="tag">Computer Networks</span>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+
+  <section id="Experience" class="experience-container">
+    <h3>Experience</h3>
+    <div class="timeline">
+
+      <!-- 1 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h2>Higher Secondary Education (12th)</h2>
+          <p class="place">Jamnagar, Gujarat · 2021 – 2023</p>
+          <p>Focus on Mathematics, Physics, and Computer Science.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h2>Bachelor of Technologies</h2>
+          <p class="place">Parul University · 2023 – Present</p>
+          <p>Learning software development, databases, and AI.</p>
+        </div>
+      </div>
+
+      <!-- 3 (NEW) -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h2>CodeAlpha Internship</h2>
+          <p class="place">Remote · Sup-25 to Oct-25</p>
+          <p>Worked on real-world projects using web technologies.</p>
+        </div>
+      </div>
+
+      <!-- 4 (NEW) -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h2>AR / VR Internship</h2>
+          <p class="place">Vadodara · Nov-2025 to present</p>
+          <p>Built immersive AR/VR experiences and navigation concepts.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--------------------------------------- Skills page ---------------------------------------->
+
+
+  <section id="Skills" class="skills-section">
+    <h3 class="section-title">My Skills</h3>
+  
+    <!-- Skills Wrapper -->
+    <div class="skills-wrapper">
+
+      <!-- LEFT COLUMN -->
+      <div class="skills">
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>AI & Machine Learning</span>
+            <span>95%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress orange" data-width="95%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Backend Development</span>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress purple" data-width="90%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Frontend Development</span>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress blue" data-width="85%"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="skills">
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>DevOps & Cloud</span>
+            <span>80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress teal" data-width="80%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>UI / UX Design</span>
+            <span>88%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress pink" data-width="88%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Database Management</span>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress green" data-width="85%"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-block">
+        <div class="auto-slider">
+          <div class="track">
+            <div class="img-card">
+              <img src="assets/AWS.jpg">
+              <button class="open-btn" onclick="openImage('assets/AWS.jpg')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/Block Chain bootcamp.png">
+              <button class="open-btn" onclick="openImage('assets/Block Chain bootcamp.png')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/C language.png">
+              <button class="open-btn" onclick="openImage('assets/C language.png')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/gemini.jpg">
+              <button class="open-btn" onclick="openImage('assets/gemini.jpg')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/hackathon.png">
+              <button class="open-btn" onclick="openImage('assets/hackathon.png')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/IBM introduction html,css,js.jpg">
+              <button class="open-btn" onclick="openImage('assets/IBM introduction html,css,js.jpg')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/internship.png">
+              <button class="open-btn" onclick="openImage('assets/internship.png')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/java.png">
+              <button class="open-btn" onclick="openImage('assets/java.png')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/IBM-WEB-Development.jpg">
+              <button class="open-btn" onclick="openImage('assets/IBM-WEB-Development.jpg')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/NPTEL.png">
+              <button class="open-btn" onclick="openImage('assets/NPTEL.png')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/prompt-eng.jpg">
+              <button class="open-btn" onclick="openImage('assets/prompt-eng.jpg')">⤢</button>
+            </div>
+            <div class="img-card">
+              <img src="assets/SQL.png">
+              <button class="open-btn" onclick="openImage('assets/SQL.png')">⤢</button>
+            </div>
+             <div class="img-card">
+              <img src="assets/TechNest Ai webinar.jpg">
+              <button class="open-btn" onclick="openImage('assets/TechNest Ai webinar.jpg')">⤢</button>
+            </div>
+             <div class="img-card">
+              <img src="assets/workshop.png">
+              <button class="open-btn" onclick="openImage('assets/workshop.png')">⤢</button>
+            </div>
+          </div>
+
+
+          <div class="slider-nav">
+            <button class="nav-btn prev" aria-label="Previous"><i class="bx bx-chevron-left"></i></button>
+            <button class="nav-btn next" aria-label="Next"><i class="bx bx-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+
+       <!-- MODAL -->
+      <div class="img-modal" id="imgModal">
+        <div class="modal-box">
+          <span class="close" onclick="closeImage()">×</span>
+          <img id="modalImg">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+   <section id="Projects" class="projects-section">
+      <h3 class="projects-title">My Projects</h3>
+      <p class="projects-subtitle">
+        Explore my latest work across web development, AI, and open source contributions.
+      </p>
+
+      <!-- Filter Buttons -->
+    <div class="projects-filters">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="web">Web Development</button>
+  <button class="filter-btn" data-filter="ai">App Development</button>
+</div>
+
+<!-- Featured Projects -->
+      <div class="featured-title">
+        <i class='bx bx-rocket'></i> Featured Projects
+      </div>
+       <div class="projects-grid">
+
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/image.png" alt="Auction Oasis">
+      </div>
+
+      <div class="overlay-2">
+        <a href="https://linkedin.com/in/dhruvin-sorathiya" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/dhruvin-sorathiya" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-content">
+        <h3>Auction Oasis</h3>
+        <p>Join thousands of collectors and enthusiasts in the most trusted online auction platform. Bid, win, and collect your next treasure.</p>
+        <div class="tech-stack">
+          <span>Express.js</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>EJS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/hackathon.png" alt="Portfolio">
+      </div>
+
+      <div class="overlay-2">
+        <a href="https://linkedin.com/in/dhruvin-sorathiya" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/dhruvin-sorathiya" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-content">
+        <h3>Developer Portfolio</h3>
+        <p> A modern, responsive portfolio showcasing projects, skills, and experience with smooth animations
+    and an interactive user interface.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Three.js</span>
+          <span>TailwindCSS</span>
+          <span>Framer Motion</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/NPTEL.png" alt="Auction Oasis">
+      </div>
+
+      <div class="overlay-2">
+        <a href="https://linkedin.com/in/dhruvin-sorathiya" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/dhruvin-sorathiya" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-content">
+        <h3>Auction Oasis</h3>
+        <p>Join thousands of collectors and enthusiasts in the most trusted online auction platform. Bid, win, and collect your next treasure.</p>
+        <div class="tech-stack">
+          <span>Express.js</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>EJS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    </section>
+<div class="project-modal" id="projectModal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <img id="modalImg-2">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+
+
+
+  <!---------------------------------------contact --------------------------------------->
+  <!--contact section -->
+  <section id="Contact" class="contact-section">
+    <h3 class="contact-title">Contact US</h3>
+    <p class="contact-subtitle"> Ready to work together? Let's discuss your next project and bring your ideas to life.
+    </p>
+    <div class="contact-container"> <!-- LEFT -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="info-item"> <i class='bx bxs-envelope info-icon'></i>
+          <div>
+            <h4>Email</h4>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRnZVsSXWsHvwrvTffvCjhvgVrFmHRsFWBvbpNDhksrWvpVmLBbwScGzPnRBPHssbPvklgl" target="_blank" rel="noopener noreferrer">sorathiyadhruvin2005@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-item"> <i class='bx bxs-phone info-icon' style="background: #27b5b5;"></i>
+          <div>
+            <h4>Phone</h4> <a href="+91 9499816850">+91 9499816850</a>
+          </div>
+        </div>
+        <div class="info-item"> <i class='bx bxs-map info-icon'></i>
+          <div>
+            <h4>Location</h4>
+            <p>Vadodara, Gujarat, India</p>
+          </div>
+        </div>
+        <h3>Connect With Me</h3>
+        <div class="social-icons"> <a href="https://linkedin.com/in/sorathiya-dhruvin" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class='bx bxl-linkedin' style="color:rgb(0, 60, 255)"></i>
+          </a>
+          <a href="https://github.com/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class='bx bxl-github' style="color:rgb(35, 35, 35)"></i>
+          </a>
+          <a href="https://twitter.com/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer"
+            aria-label="Twitter">
+            <i class='bx bxl-twitter' style="color: blue"></i>
+          </a>
+        </div>
+      </div> <!-- RIGHT -->
+        <div class="contact-form">
+  <form id="contactForm">
+    
+    <div class="form-row">
+      <div style="flex:1">
+        <label>Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+      </div>
+
+      <div style="flex:1">
+        <label>Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+      </div>
+    </div>
+
+    <div>
+      <label>Subject</label>
+      <input id="subject" name="subject" type="text" placeholder="What's this about?" required>
+    </div>
+
+    <div>
+      <label>Message</label>
+      <textarea id="message" name="message" rows="5"
+        placeholder="Tell me about your project..." required></textarea>
+    </div>
+
+    <div class="checkbox-container">
+      <input id="agree" type="checkbox" required>
+      <label for="agree">
+        I agree to the terms and conditions and allow you to contact me
+      </label>
+    </div>
+
+    <button id="submitBtn" type="submit">
+      <span class="btn-text"><i class='bx bx-send'></i> Send Message</span>
+    </button>
+
+    <p id="formStatus" class="form-status"></p>
+
+  </form>
+</div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-left">
+      <h3>Sorathiya Dhruvin</h3>
+      <p>Full Stack Developer & AI Enthusiast</p>
+    </div>
+
+    <div class="footer-center">
+      <p>© 2025 sorathiya dhruvin. All rights reserved.</p>
+    </div>
+
+    <div class="footer-right">
+      <h3>Connect with Me</h3>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class='bx bxl-linkedin' style="color:rgb(0, 60, 255)"></i>
+        </a>
+        <a href="https://github.com/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class='bx bxl-github' style="color:rgb(35, 35, 35)"></i>
+        </a>
+        <a href="https://twitter.com/sorathiya-dhruvin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <i class='bx bxl-twitter' style="color: blue"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
