@@ -1176,41 +1176,43 @@ h2 {
 
 
 .slider-block {
-  grid-column: 1 / -1;      /* FULL WIDTH under skills */
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* center photos + dots */
-  position:relative;
+  align-items: center;
+  position: relative;
   margin-top: 10px;
-   pointer-events: none; /* prevent drag */
-  user-drag: none;
-  -webkit-user-drag: none;
+  width: 100%; /* આ add કરો */
+  overflow: hidden; /* આ add કરો */
 }
 
 .auto-slider {
   display: flex;
   justify-content: center;
   margin: 60px auto;
-  overflow: hidden;
+  overflow: hidden; /* આ રાખો */
+  width: 100%; /* આ add કરો */
+  max-width: 1200px; /* આ add કરો */
 }
 
 .track {
   display: flex;
   transition: transform 0.7s ease;
-   touch-action: pan-y;
+  touch-action: pan-y;
+  width: 100%; /* આ add કરો */
 }
 
 
-
-/* CARD */
+/* CARD - Desktop માટે */
 .img-card {
   position: relative;
-  min-width: 33.3333%;
-  height: 300px;
+  min-width: 33.3333%; /* 3 cards at once */
+  flex-shrink: 0; /* આ IMPORTANT છે */
+  height: 280px;
   padding: 10px;
   cursor: pointer;
   overflow: hidden;
-  touch-action: pan-y
+  touch-action: pan-y;
 }
 
 .img-card img {
@@ -1237,14 +1239,20 @@ h2 {
   font-size: 16px;
 }
 
-/* ---------- MOBILE ---------- */
+/* MOBILE માટે - 1 card at a time */
 @media (max-width: 768px) {
   .img-card {
-    min-width: 100%;
+    min-width: 100% !important; /* Full width */
+    flex-shrink: 0;
     height: 220px;
   }
+  
+  .auto-slider {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
 }
-
 .open-btn:hover{
   transform: scale(1.5);
   transition:ease 1s;
